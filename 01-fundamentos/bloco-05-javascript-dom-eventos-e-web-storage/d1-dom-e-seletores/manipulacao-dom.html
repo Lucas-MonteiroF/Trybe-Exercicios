@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+        function alteraTextoP() {
+            let paragrafo = document.getElementsByTagName('p')[1];
+            paragrafo.innerHTML = 'Independência financeira até o final de 2022!!!!'
+        }
+        alteraTextoP();
+        
+        function mudaCor(cor) {
+            let fundo = document.getElementsByClassName('main-content')[0];
+            fundo.style.background = cor;
+        }
+        mudaCor('rgb(76,164,109');
+
+        function mudaCorCaixa(cor){
+            let caixa = document.getElementsByClassName('center-content')[0];
+            caixa.style.background = cor;
+        }
+        mudaCorCaixa('blueviolet');
+
+        function corrijeTextoTitulos(tag, texto) {
+            let titulo = document.getElementsByTagName(tag)[0];
+            titulo.innerHTML = texto
+        }
+        corrijeTextoTitulos('h1', 'Exercício 5.1 - JavaScript');
+
+        function textoCaps(tag) {
+            let texto = document.getElementsByTagName(tag)[0];
+            texto.innerHTML = texto.innerHTML.toUpperCase();
+        }
+        textoCaps('p');
+
+        function revelar(tag) {
+            let conteudo = document.getElementsByTagName(tag);
+            for (let count = 0; count < conteudo.length; count += 1) {
+                console.log(conteudo[count].innerHTML);
+            }
+        }
+        revelar('p');
+    </script>
+  </body>
+</html>
