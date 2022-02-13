@@ -35,6 +35,7 @@
     text-align: center;
     vertical-align: middle;
     width: 13.6%;
+    border: solid blueviolet 1px;
   }
   
   .input-container {
@@ -56,7 +57,7 @@
   }
   
   .month-container {
-    background: green;
+    background: blueviolet;
     padding: 40px 25px;
     text-align: center;
   }
@@ -138,6 +139,7 @@
   
   .week-days-container {
     margin-left: 35px;
+    padding: 1%;
   }
   
   .week-days li {
@@ -146,10 +148,13 @@
     text-align: center;
     vertical-align: middle;
     width: 13.6%;
+    padding: 1px;
+    text-decoration: underline;
   }
   
   .week-days {
     font-size: 20px;
     margin: 0px;
     padding: 10px 0;
+    border: solid black 1px;
   }
