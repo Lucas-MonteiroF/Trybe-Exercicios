@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trybe Form</title>
+</head>
+<body>
+    <header>
+        <h1 class="centrar">League of Trybe</h1>
+    </header>
+    <main>
+        <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" method="get">
+        <section class="container">
+            <label for="nome-completo">Nome:</label>
+            <input type="text" id="nome-completo" name="nome completo" minlength="10" maxlength="40" required>
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" minlength="10" maxlength="50" required>
+        </section>
+        <section class="container">
+            <p>Marque suas roles</p>
+
+            <input type="checkbox" id="op1" class="caixa">
+            <label for="op1">Top Lane</label>
+
+            <input type="checkbox" id="op2" class="caixa">
+            <label for="op2">Jungle</label>
+
+            <input type="checkbox" id="op3" class="caixa">
+            <label for="op3">Mid Lane</label>
+
+            <input type="checkbox" id="op4" class="caixa">
+            <label for="op4">Bot Lane</label>
+
+            <input type="checkbox" id="op5" class="caixa">
+            <label for="op5">Suporte</label>
+        </section>
+        <section class="container">
+            <label for="digite-aqui">Digite aqui o motivo das marcações acima</label>
+            <textarea name="digite aqui" id="digite-aqui" class="text-area"></textarea>
+        </section>
+        <section class="container">
+            <label for="data">Em que dia você está respondendo isso?</label>
+            <br>
+            <input type="date" id="data">
+        </section>
+        <section class="container">
+            <input type="checkbox" id="concordo1" class="termos">
+            <label for="doncordo1">Concordo que Yorick é melhor que Tryndamere</label>
+            <br>
+            <input type="checkbox" id="concordo2" class="termos">
+            <label for="concordo2">Concordo que os ADCs estão lamentáveis</label>
+        </section>
+        <section class="container">
+            <input type="submit" id="enviar" name="Enviar">
+            <input type="reset" id="apagar" name="apagar">
+        </section>
+    </form>   
+    </main>
+</body>
+</html>
