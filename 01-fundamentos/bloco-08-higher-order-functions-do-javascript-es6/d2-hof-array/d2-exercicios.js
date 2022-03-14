@@ -61,16 +61,13 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
 function authorBornIn1947(array) {
-  // escreva aqui o seu código
   const ano = [];
   for (let index = 0; index < array.length; index += 1) {
     ano.push(array[index].author.birthYear);
   }
   const encontrado = ano.find((nascimento) => nascimento === 1947);
-  return console.log(encontrado);
+  //return console.log(encontrado);
 }
 authorBornIn1947(books);
 
@@ -82,26 +79,42 @@ function smallerName(array) { //source: https://reactgo.com/javascript-sort-arra
   }
   list.sort((a, b) => a.length - b.length);
   nameBook = list[0];
-  return console.log(nameBook);
+  //return console.log(nameBook);
 }
 smallerName(books);
 
-function getNamedBook() {
-  // escreva seu código aqui
+function getNamedBook(array) {
+  const resultado = array.find((item) => item.name.length === 26);
+  //return console.log(resultado);
 }
+getNamedBook(books);
 
-function booksOrderedByReleaseYearDesc() {
-  // escreva aqui seu código
+function booksOrderedByReleaseYearDesc(array) {
+  const ordem = array.sort((a ,b) => b.releaseYear - a.releaseYear);
+  //return console.log(ordem);
 }
+booksOrderedByReleaseYearDesc(books);
 
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
+function everyoneWasBornOnSecXX(array) {
+  const nascimento = array.map((item) => item.author.birthYear);
+  const resultado = nascimento.every((item) => item > 1901 && item < 2000);
+  //return console.log(resultado);
 }
+everyoneWasBornOnSecXX(books);
 
-function someBookWasReleaseOnThe80s() {
-  // escreva seu código aqui
+function someBookWasReleaseOnThe80s(array) {
+  const lancamento = array.some((item) => item.releaseYear > 1980 && item.releaseYear < 1989);
+  //return console.log(lancamento);
 }
+someBookWasReleaseOnThe80s(books);
 
-function authorUnique() {
-  // escreva seu código aqui
+function authorUnique(array) {
+  const nascimento = array.map((item) => item.author.birthYear);
+  for (let index = 0; index < nascimento.length; index += 1) {
+    if (nascimento[index] === nascimento[index]) {
+      return console.log(false);
+    } else { 
+      return console.log(true); }
+  }
 }
+authorUnique(books);
