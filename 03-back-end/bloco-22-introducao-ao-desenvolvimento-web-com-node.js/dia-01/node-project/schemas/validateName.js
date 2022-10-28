@@ -5,14 +5,16 @@ const nameSchema = joi.object({
     .alphanum()
     .min(2)
     .max(30)
-    .required,
+    .required(),
 })
 
-const validateName = (name) => {
-    nameSchema.validate(name)
-    if(validateName.error) {
-        console.log(validateName.error.details[0].message);
+const validateName = async (name) => {
+    const validation = nameSchema.validate(name);
+
+    if(validation.error) {
+       return console.log(validation.error.message);
     }
+return console.log(`Olá ${Object.values(name)[0]}, seja bem vindo(a)`);
 }
 
 module.exports = {
